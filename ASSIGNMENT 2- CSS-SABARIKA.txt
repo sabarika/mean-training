@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+.header {
+  background-color: #cc0066;
+  color: black;
+  padding: 15px;
+  font-family: cursive;
+}
+.main {
+  width: 100%;
+  float: left;
+  padding: 15px;
+  border: 1px solid black;
+  background-color:  #ccffe6;
+  font-size: 20px;
+
+}
+.product {
+  width: 25%;
+  float: left;
+  padding: 15px;
+  border: 1px solid gray;
+  background-color: #ff8080;
+   font-size: 20px;
+   font-family: serif;
+
+}
+.offer{
+	width: 100%;
+  float: left;
+  padding: 15px;
+  border: 1px solid gray;
+  background-color: #d5ff80;
+  font-size: 20px;
+}
+.discount{
+	width: 50%;
+  float: left;
+  padding: 15px;
+  border: 1px solid gray;
+  background-color:  #4dffff;
+  font-size: 20px;
+}
+.fastmoving{
+	width: 100%;
+  float: left;
+  padding: 15px;
+  border: 1px solid gray;
+  background-color: #d9d9d9;
+  font-size: 20px;
+}
+.splitems{
+	 width: 25%;
+  float: left;
+  padding: 15px;
+  border: 1px solid gray;
+  background-color:#ccffff;
+   font-size: 20px;
+   font-family: serif;
+
+}
+.footer {
+  background-color: #8600b3;
+  color:#ffffff ;
+  text-align: center;
+  font-size: 15px;
+  padding: 15px;
+}
+	<title>Product Grid</title>
+</style>
+</head>
+
+<body>
+<div class="header">
+  <h1><center><i>MYNTRA<i></center></h1>
+</div>
+<div class="main">
+  <h2>New Arrivals!!!<h2>
+</div>
+<div class="product"><h3>Name:Watch</h3></div>
+	
+	<div class="product"><h3>product:Titan</h3></div>
+	<div class="product"><h3>Description:smart watch</h3></div>
+	<div class="product"><h3>price:RS.1500</h3></div>
+	<div class="offer">
+		<h5>Today's Offer!!!...</h5>
+	</div>
+<div class="discount">
+	<h3> 50% discount for shoes </h3></div>
+	<div class="discount">
+	<h3> 50% discount for watches</h3>
+</div>
+<div class="fastmoving">
+	<h3>Fast moving items....</h3>
+</div>
+<div class="splitems">
+	<h3>Watches</h3>
+ </div>
+ <div class="splitems">
+	<h3>Shoes</h3>
+ </div>
+ <div class="splitems">
+	<h3>Accessories</h3>
+ </div>
+ <div class="splitems">
+	<h3>cellphone</h3>
+ </div>
+<div class="footer">
+  <p>Thankyou for visiting...</p>
+</div>
+</body>
+</html>
