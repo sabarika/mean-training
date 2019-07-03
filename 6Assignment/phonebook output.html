@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)file:///F:/mean/bootstrap/phonebook.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>To Do List</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./phonebook output_files/bootstrap.min.css">
+  <script src="./phonebook output_files/jquery.min.js.download"></script>
+  <script src="./phonebook output_files/bootstrap.min.js.download"></script>
+
+</head><body bgcolor="color:black">
+	<div>
+		  <div class="jumbotron">
+<center>
+	<br><br><br>
+	<h1><b>PHONE BOOK</b></h1>
+	<br><br>
+<span class="glyphicon glyphicon-user"></span><b> NAME:</b><input type="text" id="name" placeholder="Enter ur name">
+<br><br>
+<span class="glyphicon glyphicon-phone"></span><b>MOBILE NO:</b><input type="text" id="mob" placeholder="Enter ur mob no">
+<br><br>
+<button id="submit" onclick="addToDo()" class="btn btn-info">Submit</button>
+
+</center>
+</div>
+<center><div id="result" style="background-color:pink;"><h2><b>PHONE BOOK DETAILS</b></h2></div></center>
+
+</div>
+<script type="text/javascript">
+var todolist = [];
+var name;
+var mobile;
+function phonebook(name,mobile)
+{
+this.name=name;
+this.mobile=mobile;
+}
+function addToDo()
+{
+var name = document.getElementById("name").value;
+var mobile = document.getElementById("mob").value;
+//creating customer object
+var ref = new phonebook(name,mobile);
+var index = todolist.push(ref);
+console.log('index ',index);
+console.log(todolist);
+displayToDo(index,ref);
+}
+function displayToDo(index,ref){
+var result = '';
+var outerdiv = document.getElementById("result");
+var tododiv = document.createElement("div");
+var todospan = document.createElement("input");
+var todomob = document.createElement("input");
+var todoedit = document.createElement("button");
+var tododelete = document.createElement("button");
+var brk = document.createElement("br");
+tododiv.setAttribute("id",index);
+todoedit.setAttribute("id",index);
+tododelete.setAttribute("id",index);
+todospan.type = "text";
+todospan.value = ref.name;
+
+todomob.type = "text";
+todomob.value = ref.mobile;
+
+todoedit.innerText ="Edit";
+tododelete.innerText ="Delete";
+tododiv.appendChild(todospan);
+tododiv.appendChild(todomob);
+tododiv.appendChild(todoedit);
+tododiv.appendChild(tododelete);
+tododiv.appendChild(brk);
+outerdiv.append(tododiv);
+todoedit.addEventListener("click",editToDo);
+tododelete.addEventListener("click",deleteToDo);	
+}
+function editToDo()
+{
+console.log('edit clicked');
+var editedValue='';
+console.log(this.parentNode.firstChild.innerHTML);
+todoedit = this.parentNode.firstChild;
+index =event.srcElement.id;
+editedValue = todoedit.value;
+console.log('editedValue ',editedValue, ' index ',index);
+todolist[index-1] = editedValue;
+console.log('todolist after update :',todolist);
+}
+function deleteToDo(){
+console.log('delete clicked');
+console.log(event.srcElement.id);
+console.log(this.parentNode);
+index = event.srcElement.id;
+var pare = this.parentNode;
+pare.remove();
+todolist.splice(index-1,1);
+console.log('after deletion :',todolist);
+}
+</script>
+
+
+</body></html>

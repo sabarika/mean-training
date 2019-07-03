@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)file:///F:/mean/javascript/eb%20bill.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>EB</title>
+
+</head>
+<body>
+<h2>EB Bill</h2>
+<script>
+function calculateBill(unit)
+{
+if(unit<=100)
+{
+amount=unit*2;
+}
+else if(unit>100 && unit<=200)
+{
+amount=200+((unit-100)*3);
+}
+else(unit>200)
+{
+amount=200+300+((unit-200)*4);
+}
+return amount;
+}
+Totalamount=calculateBill(150);
+console.log('Electricity Bill is' + Totalamount);
+</script>
+
+</body></html>

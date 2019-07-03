@@ -1,3 +1,4 @@
+ RESPONSIVE WEB DESIGN:
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,14 +7,17 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   font-family: "Lucida Sans", sans-serif;
 }
+
 .header {
   background-color: #cc0066;
   color: black;
   padding: 15px;
   font-family: cursive;
+  
 }
 .main {
   width: 100%;
@@ -21,13 +25,13 @@ html {
   padding: 15px;
   border: 1px solid black;
   background-color:  #ccffe6;
-  font-size: 20px;
+  font-size: 15px;
 
 }
 .product {
   width: 25%;
   float: left;
-  padding: 15px;
+  padding: 10px;
   border: 1px solid gray;
   background-color: #ff8080;
    font-size: 20px;
@@ -73,46 +77,61 @@ html {
   color:#ffffff ;
   text-align: center;
   font-size: 15px;
-  padding: 15px;
+  padding: 10px;
 }
-	<title>Product Grid</title>
+
+@media only screen and (max-width:900px) {
+ 
+ .product, .discount, .splitems  {
+   width:50%;
+ }
+ 
+
+@media only screen and (max-width:600px) {
+ 
+ .product, .discount, .splitems  {
+   width:100%;
+
+ }
+}
 </style>
 </head>
 
 <body>
+
 <div class="header">
-  <h1><center><i>MYNTRA<i></center></h1>
+  <h1><center><i><img src="img/myntra.png" height="50px",width="50px">MYNTRA<i></center></h1>
 </div>
 <div class="main">
   <h2>New Arrivals!!!<h2>
 </div>
-<div class="product"><h3>Name:Watch</h3></div>
+<div class="product"><h3><img src="img/wat.png" height="20px",width="20px">Watch</h3></div>
 	
 	<div class="product"><h3>product:Titan</h3></div>
-	<div class="product"><h3>Description:smart watch</h3></div>
+	<div class="product"><h3>Des:watch</h3></div>
 	<div class="product"><h3>price:RS.1500</h3></div>
 	<div class="offer">
-		<h5>Today's Offer!!!...</h5>
+		<h5><img src="img/offer.png" height="40px",width="40px">Today's Offer!!!...</h5>
 	</div>
 <div class="discount">
-	<h3> 50% discount for shoes </h3></div>
+	<h3><img src="img/shoe.jfif" height="20px",width="20px"> 50% shoes </h3></div>
 	<div class="discount">
-	<h3> 50% discount for watches</h3>
+	<h3><img src="img/wat.png" height="20px",width="20px"> 50%  watches</h3>
 </div>
 <div class="fastmoving">
 	<h3>Fast moving items....</h3>
 </div>
 <div class="splitems">
-	<h3>Watches</h3>
+	<h3><img src="img/wat.png" height="25px",width="25px">Watches</h3>
  </div>
  <div class="splitems">
-	<h3>Shoes</h3>
+	<h3><img src="img/shoe.jfif" height="25px",width="25px">Shoes</h3>
  </div>
  <div class="splitems">
-	<h3>Accessories</h3>
+	<h3><img src="img/acc.jfif" height="25px",width="25px">Accessories</h3>
  </div>
  <div class="splitems">
-	<h3>cellphone</h3>
+	<h3><img src="img/mob.png" height="25px",width="25px">cellphone</h3>
  </div>
 <div class="footer">
   <p>Thankyou for visiting...</p>
